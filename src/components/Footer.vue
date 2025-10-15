@@ -1,7 +1,7 @@
 <template>
   <footer class="site-footer">
     <div class="wrap">
-      <p>© {{ new Date().getFullYear() }} Burger Haus — Todos los derechos reservados</p>
+      <p>© {{ new Date().getFullYear() }} Burger House — Todos los derechos reservados</p>
     </div>
   </footer>
 </template>

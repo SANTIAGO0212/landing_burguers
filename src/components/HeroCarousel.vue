@@ -93,8 +93,8 @@ function viewMore() {
   transition:background-image .6s ease;
 }
 .hero-inner{
-  position:relative;z-index:2;
-  max-width:1200px;margin:120px auto 30px;padding:40px 20px;display:flex;gap:30px;align-items:center;
+  position:relative;z-index:1;
+  max-width:1200px;margin:115px auto 20px;padding:40px 20px;display:flex;gap:40px;align-items:center;
 }
 .hero-left{flex:1;max-width:55%}
 .hero-title{
