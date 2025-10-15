@@ -5,10 +5,10 @@
                 <!--<img src="@/assets/logo.png" alt="logo" class="logo"/>-->
                 <span class="brand-text">Burguer House</span>
             </div>
-            <nav class="nav">
+            <!--<nav class="nav">
                 <a href="#menu" class="nav-link">Menu</a>
                 <a href="#about" class="nav-link">Acerca de nonosotros</a>
-            </nav>
+            </nav>-->
         </div>
     </header>
 </template>

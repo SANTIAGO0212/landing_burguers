@@ -6,17 +6,18 @@
     <div class="hero-inner">
       <div class="hero-left">
         <h1 class="hero-title">{{ activeItem.title }}</h1>
-        <p class="hero-sub">{{ activeItem.subtitle }}</p>
+        <p class="hero-sub">{{ activeItem.Subtitle }}</p>
 
-        <div class="ingresients">
-          <stron>Ingredientes: </stron>
+        <!--<div class="ingresients">
+          <stron>Descripción: </stron>
           <ul>
             <li v-for="(ing, idx) in activeItem.ingredients" :key="idx">{{ ing }}</li>
           </ul>
-        </div>
+        </div>-->
 
         <div class="hero-actions">
-          <button class="btn-primary" @click="viewMore">Ver más</button>
+          <button class="btn-primary" @click="viewMore">Ver Ingredientes</button>
+          <p class="hero-sub">Pídela por: {{ formatPrice(activeItem.price) }} COP</p>
         </div>
       </div>
 
@@ -36,6 +37,7 @@
 import {ref, computed} from 'vue'
 import { menuItems } from '../data/menu'
 import ThumbnalList from './ThumbnaiList.vue'
+import Swal from 'sweetalert2'
 
 const items = menuItems
 const activeIndex = ref(0)
@@ -61,7 +63,21 @@ function formatPrice(n) {
 }
 
 function viewMore() {
-    alert(`Más información de: ${activeItem.value.title}`)
+  Swal.fire({
+    title: `Ingredientes de ${activeItem.value.title}`,
+      html: `
+    <ul style="text-align: left; list-style-type: disc; margin-left: 20px;">
+      ${activeItem.value.ingredients.map(ing => `<li>${ing}</li>`).join('')}
+    </ul>`,
+    imageUrl: `${activeItem.value.image}`,
+    imageWidth: 200,
+    imageHeight: 200,
+    theme: "dark",
+    color: "#FFF",
+    confirmButtonColor: "#FF5700",
+    imageAlt: "Food"
+  });
+    //alert()
 }
 </script>
 
