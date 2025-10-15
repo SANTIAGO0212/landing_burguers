@@ -2,7 +2,7 @@
     <header class="header">
         <div class="header-inner">
             <div class="brand">
-                <!--<img src="@/assets/logo.png" alt="logo" class="logo"/>-->
+                <img src="../../public/logotipo2.png" alt="logo" class="logo"/>
                 <span class="brand-text">Burguer House</span>
             </div>
             <!--<nav class="nav">
