@@ -5,13 +5,13 @@
 
     <div class="hero-inner">
       <div class="hero-left">
-        <!--<h1 class="hero-title">{{ activeItem.title }}</h1>-->
-        <!--<p class="hero-sub">{{ activeItem.subtitle }}</p>-->
+        <h1 class="hero-title">{{ activeItem.title }}</h1>
+        <p class="hero-sub">{{ activeItem.subtitle }}</p>
 
         <div class="ingresients">
           <stron>Ingredientes: </stron>
           <ul>
-            <!--<li v-for="(ing, idx) in activeItem.ingredients" :key="idx">{{ ing }}</li>-->
+            <li v-for="(ing, idx) in activeItem.ingredients" :key="idx">{{ ing }}</li>
           </ul>
         </div>
 
@@ -34,8 +34,8 @@
 
 <script setup>
 import {ref, computed} from 'vue'
-import { menuItems } from '@/data/menu.js'
-import ThumbnalList from './ThumbnailList.vue'
+import { menuItems } from '../data/menu'
+import ThumbnalList from './ThumbnaiList.vue'
 
 const items = menuItems
 const activeIndex = ref(0)

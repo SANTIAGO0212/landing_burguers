@@ -21,7 +21,7 @@ export const menuItems = [
         Subtitle: 'Veggie con un delicioso sabor',
         ingredients: ['Pan integral', 'Hamburguesa vegetal', 'Aguactate', 'Mix hojas', 'Tomate', 'Alioli'],
         price: 20000,
-        image: new URL('../assets/burguers/burguer-3.png', import.meta.url)
+        image: new URL('../assets/burguers/burguers-3.png', import.meta.url)
     },
     {
         id:4,
